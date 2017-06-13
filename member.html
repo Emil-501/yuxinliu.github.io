@@ -532,16 +532,18 @@ SDN之路
 				<script>
 					u1 = "images/member_photo/在读研究生/2015级/刘宇欣/刘宇欣.jpg";
 					u2 = "dynamic/20161029/101.jpg";
-					function aa(img){
-						if(!img.src.match("dynamic/20161029/101.jpg")){
-							img.src = u2;
-						}
-						else{
-							img.src = u1;
-						}
+					fl = false;
+					function cc(){
+						fl = true;
+						e1 = document.getElementById("dfdf");
+						setTimeout("if(fl){e1.src=u2;}",5000);
+					}
+					function bb(img){
+						fl = false;
+						img.src = u1;
 					}
 				</script>
-							<img src="images/member_photo/在读研究生/2015级/刘宇欣/刘宇欣.jpg" alt="" onclick = 'aa(this)'>
+							<img id="dfdf" src="images/member_photo/在读研究生/2015级/刘宇欣/刘宇欣.jpg" alt="" onmouseover = "cc();" onmouseout = "bb(this);">
 						</a>
 					</div>
 					<div class="desc eight columns omega" style="font-size: 15px;">
