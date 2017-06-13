@@ -523,27 +523,10 @@ SDN之路
 				</div>
 				<!--彭建云－－结束行-->
 				<!--刘宇欣－－起始行-->
-				
-
-
 				<div class="row-item sixteen columns identity">
 					<div class="work three columns alpha" style="margin-right:75px;">
 						<a class="work-image">
-				<script>
-					u1 = "images/member_photo/在读研究生/2015级/刘宇欣/刘宇欣.jpg";
-					u2 = "dynamic/20161029/101.jpg";
-					fl = false;
-					function cc(){
-						fl = true;
-						e1 = document.getElementById("dfdf");
-						setTimeout("if(fl){e1.src=u2;}",5000);
-					}
-					function bb(img){
-						fl = false;
-						img.src = u1;
-					}
-				</script>
-							<img id="dfdf" src="images/member_photo/在读研究生/2015级/刘宇欣/刘宇欣.jpg" alt="" onmouseover = "cc();" onmouseout = "bb(this);">
+							<img src="images/member_photo/在读研究生/2015级/刘宇欣/刘宇欣.jpg" alt="">
 						</a>
 					</div>
 					<div class="desc eight columns omega" style="font-size: 15px;">
