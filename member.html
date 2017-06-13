@@ -557,6 +557,13 @@ SDN之路
 							}
 							zwf_i = 0;
 							var bo2 = false;
+							function zwfprim(){
+								for(var i=0;i<16;i++){
+									var img = new Image();
+									img.src=zwf_u+i+".png";
+								}
+							}
+							window.onload=zwfprim;
 							function zwfrandom(a,b){
 								var ran0 = Math.random();
 								return(a+Math.round(ran0*(b-a)));
