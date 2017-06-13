@@ -670,6 +670,7 @@ SDN之路
 								zwf_ar[zwf_i] = ran_zwf;
 								zwf_i = zwf_i+1;
 								if(zwf_i<zwf_ar.length){
+									alert("12121");
 									zwf_ph.src = zwf_u+ran_zwf+".png";
 								}
 								else{	
@@ -689,7 +690,7 @@ SDN之路
 									zwf_ar[i]=-1;
 								}
 								var zwf_ph = document.getElementById("zwfph");
-								zwf_ph.src = zwf_u+"0.png";
+								zwf_ph.src = zwf_u+"1.png";
 							}
 						
 						</script>
