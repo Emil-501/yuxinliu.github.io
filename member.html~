@@ -564,17 +564,17 @@ SDN之路
 							function zwfphoto1(){
 								var zwf_ph = document.getElementById("zwfph");
 								var bo1 = false;
-								var ran_zwf = 1;;
+								var rzwf = 1;;
 								do{
 									bo1 = false;
-									ran_zwf = zwfrandom(1,16);
+									rzwf = zwfrandom(1,16);
 									for(var i=0;i<zwf_ar.length;i++){
-										if(zwf_ar[i]==ran_zwf){
+										if(zwf_ar[i]==rzwf){
 											bo1 = true;
 										}
 									}
 								}while(bo1);
-								zwf_ar[zwf_i] = ran_zwf;
+								zwf_ar[zwf_i] = rzwf;
 								zwf_i = zwf_i+1;
 								/*if(zwf_i>=zwf_ar.length){
 									zwf_i=0;
@@ -582,9 +582,9 @@ SDN之路
 										zwf_ar[i]=-1;
 									}
 								}*/
-								//var ran_zwf = zwfrandom(1,9);
+								//var rzwf = zwfrandom(1,9);
 								if(zwf_i<zwf_ar.length){
-									zwf_ph.src = zwf_u+ran_zwf+".png"
+									zwf_ph.src = zwf_u+rzwf+".png"
 									if(bo2 == true){
 										setTimeout("zwfphoto1()",130)
 									}
