@@ -669,66 +669,9 @@ SDN之路
 								}while(bo1);
 								zwf_ar[zwf_i] = ran_zwf;
 								zwf_i = zwf_i+1;
-								/*if(zwf_i>=zwf_ar.length){
-									zwf_i=0;
-									for(var i=0;i<zwf_ar.length;i++){
-										zwf_ar[i]=-1;
-									}
-								}*/
-								//var ran_zwf = zwfrandom(1,9);
 								if(zwf_i<zwf_ar.length){
-									/*switch(ran_zwf){
-										case 1:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/1.png";
-											break;
-										case 2:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/2.png";
-											break;
-										case 3:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/3.png";
-											break;
-										case 4:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/4.png";
-											break;
-										case 5:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/5.png";
-											break;
-										case 6:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/6.png";
-											break;
-										case 7:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/7.png";
-											break;
-										case 8:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/8.png";
-											break;
-										case 9:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/9.png";
-											break;
-										case 10:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/10.png";
-											break;
-										case 11:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/11.png";
-											break;
-										case 12:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/12.png";
-											break;
-										case 13:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/13.png";
-											break;
-										case 14:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/14.png";
-											break;
-										case 15:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/15.png";
-											break;
-										case 16:
-											zwf_ph.src = "images/member_photo/在读研究生/2015级/张为凡/16.png";
-											break;
-										default:
-									}*/
 									zwf_ph.src = zwf_u+ran_zwf+".png";
+									alert("sdfs");
 									if(bo2 == true){
 								//		setTimeout("zwfphoto1();",130);
 									}
