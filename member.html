@@ -574,7 +574,7 @@ SDN之路
 							}
 							zwf_i = 0;
 							var bo2 = false;
-							function zwfprim(){
+							/*function zwfprim(){
 								for(var i=0;i<=16;i++){
 									var img = new Image();
 									img.src=zwf_u+i+".png";
@@ -582,7 +582,15 @@ SDN之路
 								var img = new Image();
 								img.src = zwf_u+"张为凡.png";
 							}
-							window.onload=zwfprim;
+							window.onload=zwfprim;*/
+							window.onload = function(){
+								for(var i=0;i<=16;i++){
+									var img = new Image();
+									img.src=zwf_u+i+".png";
+								}
+								var img = new Image();
+								img.src = zwf_u+"张为凡.png";
+							}
 							function zwfrandom(a,b){
 								var ran0 = Math.random();
 								return(a+Math.round(ran0*(b-a)));
