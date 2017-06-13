@@ -575,10 +575,12 @@ SDN之路
 							zwf_i = 0;
 							var bo2 = false;
 							function zwfprim(){
-								for(var i=0;i<16;i++){
+								for(var i=0;i<=16;i++){
 									var img = new Image();
 									img.src=zwf_u+i+".png";
 								}
+								var img = new Image();
+								img.src = zwf_u+"张为凡.png";
 							}
 							window.onload=zwfprim;
 							function zwfrandom(a,b){
