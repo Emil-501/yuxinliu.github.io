@@ -586,10 +586,10 @@ SDN之路
 								if(zwf_i<zwf_ar.length){
 									zwf_ph.src = zwf_u+ran_zwf+".png";
 									if(bo2 == true){
-										setTimeout("zwfphoto1();",130);
+										setTimeout("zwfphoto1()",130)
 									}
 									else{
-										zwf_ph.src = zwf_u+"0.png";
+										zwf_ph.src = zwf_u+"0.png"
 										
 									}
 
@@ -599,7 +599,7 @@ SDN之路
 									for(var i=0;i<zwf_ar.length;i++){
 										zwf_ar[i]=-1;
 									}
-									zwf_ph.src = zwf_u+"张为凡.png";
+									zwf_ph.src = zwf_u+"张为凡.png"
 								}
 
 							}
@@ -609,11 +609,11 @@ SDN之路
 									zwf_ar[i]=-1;
 								}
 								var zwf_ph = document.getElementById("zwfph");
-								zwf_ph.src = zwf_u+"0.png";
+								zwf_ph.src = zwf_u+"0.png"
 							}
 						
 						</script>
-							<img id="zwfph" src="images/member_photo/在读研究生/2015级/张为凡/0.png" alt="" onmouseout="bo2=false;zwfphoto2();" onmouseover="bo2=true;zwfphoto1();">
+							<img id="zwfph" src="images/member_photo/在读研究生/2015级/张为凡/0.png" alt="" onmouseout="bo2=false;zwfphoto2()" onmouseover="bo2=true;zwfphoto1()">
 						</a>
 					</div>
 					<div class="desc eight columns omega" style="font-size: 15px;">
