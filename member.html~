@@ -671,14 +671,6 @@ SDN之路
 								zwf_i = zwf_i+1;
 								if(zwf_i<zwf_ar.length){
 									zwf_ph.src = zwf_u+ran_zwf+".png";
-									if(bo2 == true){
-								//		setTimeout("zwfphoto1();",130);
-									}
-									else{
-										zwf_ph.src = zwf_u+"0.png";
-										
-									}
-
 								}
 								else{	
 									zwf_i=0;
