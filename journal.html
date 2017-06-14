@@ -18,10 +18,13 @@
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/settings.css" media="screen"/>
+        <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="cssttings.css" media="screen"/>
 	
 	<link rel="stylesheet" type="text/css" href="css/hw-parallax.min.css">
+	
+	
+  
 
     <!-- JS
   ================================================== -->
@@ -29,19 +32,8 @@
 	<script src="js/jquery.easing.1.3.js" type="text/javascript"></script> <!-- jQuery easing -->
 	<script src="js/modernizr.custom.js" type="text/javascript"></script> <!-- Modernizr -->
     <script src="js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script> <!-- tabs, toggles, accordion -->
-    <script src="js/custom.js" type="text/javascript"></script> <!-- jQuery initialization -->
-	<script type=text/javascript>
-		var zwf_u = "images/member_photo/在读研究生/2015级/张为凡/";
-		window.onload = function(){
-			for(var i=0;i<=16;i++){
-				var img = new Image();
-				img.src=zwf_u+i+".png";
-			}
-			var img = new Image();
-			img.src = zwf_u+"张为凡.png";
-		}
-	
-	</script>
+    <script src="http://mac.xmu.edu.cn/js/bootstrap.min.js" type="text/javascript"></script> <!-- jQuery initialization -->
+	<script src="js/modernizr.custom.js" type="text/javascript"></script>
 
     <!-- Responsive Menu -->
     <script src="js/jquery.meanmenu.js"></script> 
@@ -61,10 +53,51 @@
 	<script>
 		$(document).ready(function(){
 			$("a[data-gal^='prettyPhoto']").prettyPhoto();
+			var add;
+			$(".nav-tabs li a").click(function() {
+				//alert(this.href.split("#")[1]);
+				$("#"+this.href.split("#")[1]).addClass("active");
+				add=this.href.split("#")[1];
+				active(add);
+	                 });
 		});
+		function active(add){
+		$(".tab-pane").each(function(i){
+			if(this.id==add)
+			{
+			      this.className="tab-pane active";
+			}
+			else{
+			      this.className="tab-pane";
+			}
+		});
+		}
 	</script>
 	<!-- Tooltip -->
-    <script src="js/tooltip.js"></script>
+	<script src="js/tooltip.js"></script>
+	<style>
+	.nav {
+    margin-bottom: 18px;
+    margin-left: 0;
+    list-style: none;
+}
+  .nav-tabs {
+    float: left;
+    margin-right: 19px;
+    border-right: 1px solid #ddd;
+}
+		.tab-content {
+    overflow: hidden;
+    width:90%;
+}
+.tab-pane, .pill-pane {
+    display: none;
+}
+.active {
+    display: block;
+}
+	</style>
+	
 
 	<!-- Favicons
 	================================================== -->
@@ -171,7 +204,315 @@ SDN之路
     <div class="sixteen columns">
         <h3 class="headline" style="font-size: 20px">推荐会议与期刊</h3> 
     </div>
-	<a>在这里添加内容</a>
+	<a><ul class="nav nav-tabs">
+			    
+                <li class="active"><a href="#l1" data-toggle="tab">A类会议列表 <span class="label label-warning"></span></a></li>
+                <li class=""><a href="#l2" data-toggle="tab">B类会议列表 <span class="label label-warning"></span></a></li>
+                <li class=""><a href="#l3" data-toggle="tab">C类会议列表 <span class="label label-warning"></span></a></li>
+                <li class=""><a href="#l4" data-toggle="tab">A类国际刊物 <span class="label label-warning"></span></a></li>
+                <li class=""><a href="#l5" data-toggle="tab">B类国际刊物 <span class="label label-warning"></span></a></li>
+                <li class=""><a href="#l6" data-toggle="tab">C类国际刊物 <span class="label label-warning"></span></a></li>
+              </ul>
+ <div class="tab-content">
+                <div class="tab-pane active" id="l1">
+                  <table class="table-striped" style="line-height:24px;">
+                      <tbody>
+                        <tr>
+                          <td>&nbsp;&nbsp;1. </td>
+                          <td>&nbsp;&nbsp;<strong>MOBICOM</strong>: <a href="http://dblp.uni-trier.de/db/conf/mobicom/">ACM International Conference on Mobile Computing and Networking</a></td>
+                          <td>  截稿日期：2017-03-15</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;2. </td>
+                          <td>&nbsp;&nbsp;<strong>SIGCOMM</strong>: <a href="http://dblp.uni-trier.de/db/conf/sigcomm/index.html">ACM International Conference on the applications, technologies, architectures, and protocols for computer communication</a></td>
+                          <td>  截稿日期：2017-01-20</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;3. </td>
+                          <td>&nbsp;&nbsp;<strong>INFOCOM</strong>: <a href="http://dblp.uni-trier.de/db/conf/infocom/">IEEE International Conference on Computer Communications</a></td>
+                          <td>  截稿日期：2016-07-22</td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane" id="l2">
+                  <table class="table-striped" style="line-height:24px;">
+                      <tbody>
+                        <tr>
+                          <td>&nbsp;&nbsp;1. </td>
+                          <td>&nbsp;&nbsp;<strong>SenSys</strong>:<a href="http://dblp.uni-trier.de/db/conf/sensys/"> ACM Conference on Embedded Networked Sensor Systems</a></td>
+                          <td>截稿日期：2017-04-10</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;2. </td>
+                          <td>&nbsp;&nbsp;<strong>CoNEXT</strong>:<a href="http://dblp.uni-trier.de/db/conf/conext/"> ACM International Conference on emerging Networking EXperiments and Technologies</a></td>
+                          <td>截稿日期：2017-06-12</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;3. </td>
+                          <td>&nbsp;&nbsp;<strong>SECON</strong>: <a href="http://dblp.uni-trier.de/db/conf/secon/">IEEE Communications Society Conference on Sensor and Ad Hoc Communications and Networks</a></td>
+                          <td>截稿日期：2016-12-15</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;4. </td>
+                          <td>&nbsp;&nbsp;<strong>IPSN</strong>: <a href="http://dblp.uni-trier.de/db/conf/ipsn/">International Conference on Information Processing in Sensor Networks</a></td>
+                          <td>截稿日期：2016-10-06</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;5. </td>
+                          <td>&nbsp;&nbsp;<strong>ICNP</strong>: <a href="http://dblp.uni-trier.de/db/conf/icnp/">International Conference on Network Protocols</a></td>
+                          <td>截稿日期：2017-05-08</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;6. </td>
+                          <td>&nbsp;&nbsp;<strong>MobiHoc</strong>: <a href="http://dblp.uni-trier.de/db/conf/mobihoc/">International Symposium on Mobile Ad Hoc Networking and Computing</a></td>
+                          <td>截稿日期：2017-01-13</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;7. </td>
+                          <td>&nbsp;&nbsp;<strong>MobiSys</strong>: <a href="http://dblp.uni-trier.de/db/conf/mobisys/">International Conference on Mobile Systems, Applications, and Services</a></td>
+                          <td>截稿日期：2016-12-01</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;8. </td>
+                          <td>&nbsp;&nbsp;<strong>IWQoS</strong>: <a href="http://dblp.uni-trier.de/db/conf/iwqos/">International Workshop on Quality of Service</a></td>
+                          <td>截稿日期：2017-02-23</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;9. </td>
+                          <td>&nbsp;&nbsp;<strong>IMC</strong>: <a href="http://dblp.uni-trier.de/db/conf/imc/">Internet Measurement Conference</a></td>
+                          <td>截稿日期：2017-05-11</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;10. </td>
+                          <td>&nbsp;&nbsp;<strong>NOSSDAV</strong>: <a href="http://dblp.uni-trier.de/db/conf/nossdav/">Network and Operating System Support for Digital Audio and Video</a></td>
+                          <td>截稿日期：2017-02-24</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;11. </td>
+                          <td>&nbsp;&nbsp;<strong>NSDI</strong>: <a href="http://dblp.uni-trier.de/db/conf/nsdi/">Symposium on Network System Design and Implementation</a></td>
+                          <td>截稿日期：2016-09-14</td>
+                        </tr>
+			      
+                      </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane" id="l3">
+                  <table class="table-striped" style="line-height:24px;">
+                      <tbody>
+                        <tr>
+                          <td>&nbsp;&nbsp;1. </td>
+                          <td>&nbsp;&nbsp;<strong>ANCS</strong>: <a href="http://dblp.uni-trier.de/db/conf/ancs/">Architectures for Networking and Communications Systems</a></td>
+                          <td>截稿日期：2017-01-21</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;2. </td>
+                          <td>&nbsp;&nbsp;<strong>FORTE</strong>: <a href="http://dblp.uni-trier.de/db/conf/forte/">Formal Techniques for Networked and Distributed Systems</a></td>
+                          <td>截稿日期：</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;3. </td>
+                          <td>&nbsp;&nbsp;<strong>LCN</strong>: <a href="http://dblp.uni-trier.de/db/conf/lcn/">IEEE Conference on Local Computer Networks</a></td>
+                          <td>截稿日期：2017-04-10</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;4. </td>
+                          <td>&nbsp;&nbsp;<strong>Globecom</strong>: <a href="http://dblp.uni-trier.de/db/conf/globecom/">IEEE Global Communications Conference, incorporating the Global Internet Symposium</a></td>
+                          <td>截稿日期：2017-04-15</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;&nbsp;5. </td>
+                          <td>&nbsp;&nbsp;<strong>ICC</strong>: <a href="http://dblp.uni-trier.de/db/conf/icc/">IEEE International Conference on Communications</a></td>
+                          <td>截稿日期：2016-10-28</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;6. </td>
+                          <td>&nbsp;&nbsp;<strong>ICCCN</strong>: <a href="http://dblp.uni-trier.de/db/conf/icccn/">IEEE International Conference on Computer Communications and Networks</a></td>
+                          <td>截稿日期：2017-03-01</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;7. </td>
+                          <td>&nbsp;&nbsp;<strong>MASS</strong>: <a href="http://dblp.uni-trier.de/db/conf/mass/index.html">IEEE International Conference on Mobile Ad hoc and Sensor Systems</a></td>
+                          <td>截稿日期：2017-05-01</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;8. </td>
+                          <td>&nbsp;&nbsp;<strong>P2P</strong>: <a href="http://dblp.uni-trier.de/db/conf/p2p/">IEEE International Conference on P2P Computing</a></td>
+                          <td>截稿日期：</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;9. </td>
+                          <td>&nbsp;&nbsp;<strong>IPCCC</strong>: <a href="http://dblp.uni-trier.de/db/conf/ipccc/">IEEE International Performance Computing and Communications Conference</a></td>
+                          <td>截稿日期：2017-07-25</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;10. </td>
+                          <td>&nbsp;&nbsp;<strong>WoWMoM</strong>: <a href="http://dblp.uni-trier.de/db/conf/wowmom/">IEEE International Symposium on a World of Wireless Mobile and Multimedia Networks</a></td>
+                          <td>截稿日期：2016-11-23</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;11. </td>
+                          <td>&nbsp;&nbsp;<strong>ISCC</strong>: <a href="http://dblp.uni-trier.de/db/conf/iscc/">IEEE Symposium on Computers and Communications</a></td>
+                          <td>截稿日期：2017-02-24</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;12. </td>
+                          <td>&nbsp;&nbsp;<strong>WCNC</strong>: <a href="http://dblp.uni-trier.de/db/conf/wcnc/">IEEE Wireless Communications & Networking Conference</a></td>
+                          <td>截稿日期：2016-09-30</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;13. </td>
+                          <td>&nbsp;&nbsp;<strong>Networking</strong>: <a href="http://dblp.uni-trier.de/db/conf/networking/index.html">IFIP International Conferences on Networking</a></td>
+                          <td>截稿日期：2017-01-07</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;14. </td>
+                          <td>&nbsp;&nbsp;<strong>IM</strong>: <a href="http://dblp.uni-trier.de/db/conf/im/index.html">IFIP/IEEE International Symposium on Integrated Network Management</a></td>
+                          <td>截稿日期：2016-09-16</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;15. </td>
+                          <td>&nbsp;&nbsp;<strong>MSWiM</strong>: <a href="http://dblp.uni-trier.de/db/conf/mswim/">International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems</a></td>
+                          <td>截稿日期：2017-05-20</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;16. </td>
+                          <td>&nbsp;&nbsp;<strong>NOMS</strong>: <a href="http://dblp.uni-trier.de/db/conf/apnoms/">Asia-Pacific Network Operations and Management Symposium</a></td>
+                          <td>截稿日期：2017-09-05</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;17. </td>
+                          <td>&nbsp;&nbsp;<strong>HotNets</strong>: <a href="http://dblp.uni-trier.de/db/conf/hotnets/">The Workshop on Hot Topics in Networks</a></td>
+                          <td>截稿日期：2017-07-28</td>
+                        </tr>
+			<tr>
+                          <td>&nbsp;&nbsp;18. </td>
+                          <td>&nbsp;&nbsp;<strong>WASA</strong>: <a href="http://dblp.uni-trier.de/db/conf/wasa/">International Conference on Wireless Algorithms, Systems, and Applications</a></td>
+                          <td>截稿日期：2017-02-15</td>
+                        </tr>
+			      
+                      </tbody>
+                  </table>
+                </div>
+                  <div class="tab-pane" id="l4">
+                      <table class="table-striped" style="line-height:24px;">
+                          <tbody>
+                          <tr>
+                              <td>&nbsp;&nbsp;1. </td>
+                              <td>&nbsp;&nbsp;<strong>TON</strong>: <a href="http://dblp.uni-trier.de/db/journals/ton/">IEEE/ACM Transactions on Networking</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;2. </td>
+                              <td>&nbsp;&nbsp;<strong>JSAC</strong>: <a href="http://dblp.uni-trier.de/db/journals/jsac/">IEEE Journal of Selected Areas in Communications</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;3. </td>
+                              <td>&nbsp;&nbsp;<strong>TMC</strong>: <a href="http://dblp.uni-trier.de/db/journals/tmc/">IEEE Transactions on Mobile Computing</a></td>
+                              <td></td>
+                          </tr>
+
+                          </tbody>
+                      </table>
+                  </div>
+
+                  <div class="tab-pane" id="l5">
+                      <table class="table-striped" style="line-height:24px;">
+                          <tbody>
+                          <tr>
+                              <td>&nbsp;&nbsp;1. </td>
+                              <td>&nbsp;&nbsp;<strong>TOIT</strong>: <a href="http://dblp.uni-trier.de/db/journals/toit/">ACM Transactions on Internet Technology</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;2. </td>
+                              <td>&nbsp;&nbsp;<strong>TOMCCAP</strong>: <a href="http://dblp.uni-trier.de/db/journals/tomccap/">ACM Transactions on Multimedia Computing, Communications and Applications</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;3. </td>
+                              <td>&nbsp;&nbsp;<strong>TOSN</strong>:<a href="http://dblp.uni-trier.de/db/journals/tosn/">ACM Transactions on Sensor Networks</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;4. </td>
+                              <td>&nbsp;&nbsp;<strong>CN</strong>: <a href="http://dblp.uni-trier.de/db/journals/cn/">Computer Networks</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;5. </td>
+                              <td>&nbsp;&nbsp;<strong>TOC</strong>: <a href="http://dblp.uni-trier.de/db/journals/tcom/">IEEE Transactions on Communications</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;6. </td>
+                              <td>&nbsp;&nbsp;<strong>TWC</strong>: <a href="http://dblp.uni-trier.de/db/journals/twc/">IEEE Transactions on Wireless Communications</a></td>
+                              <td></td>
+                          </tr>
+                       
+                          </tbody>
+                      </table>
+                  </div>
+
+                  <div class="tab-pane" id="l6">
+                      <table class="table-striped" style="line-height:24px;">
+                          <tbody>
+                          <tr>
+                              <td>&nbsp;&nbsp;1. </td>
+                              <td>&nbsp;&nbsp;<strong></strong><a href="http://dblp.uni-trier.de/db/journals/adhoc/">Ad hoc Networks</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;2. </td>
+                              <td>&nbsp;&nbsp;<strong>CC</strong>: <a href="http://dblp.uni-trier.de/db/journals/comcom/">Computer Communications</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;3. </td>
+                              <td>&nbsp;&nbsp;<strong>TNSM</strong>: <a href="http://dblp.uni-trier.de/db/journals/tnsm/">IEEE Transactions on Network and Service Management</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;4. </td>
+                              <td>&nbsp;&nbsp;<strong></strong><a href="http://dblp.uni-trier.de/db/journals/iet-com/">IET Communications</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;5. </td>
+                              <td>&nbsp;&nbsp;<strong>JNCA</strong>: <a href="http://dblp.uni-trier.de/db/journals/jnca/">Journal of Network and Computer Applications</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;6. </td>
+                              <td>&nbsp;&nbsp;<strong>MONET</strong>: <a href="http://dblp.uni-trier.de/db/journals/monet/">Mobile Networks & Applications</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;7. </td>
+                              <td>&nbsp;&nbsp;<strong></strong><a href="http://dblp.uni-trier.de/db/journals/networks/">Networks</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;8. </td>
+                              <td>&nbsp;&nbsp;<strong>PPNA</strong>: <a href="http://dblp.uni-trier.de/db/journals/ppna/">Peer-to-Peer Networking and Applications</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;&nbsp;9. </td>
+                              <td>&nbsp;&nbsp;<strong>WCMC</strong>: <a href="http://dblp.uni-trier.de/db/journals/wicomm/">Wireless Communications & Mobile Computing</a></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>10. </td>
+                              <td>&nbsp;&nbsp;<strong></strong><a href="http://dblp.uni-trier.de/db/journals/winet/">Wireless Networks</a></td>
+                              <td></td>
+                          </tr>
+                         
+                          </tbody>
+                      </table>
+                  </div>
+              </div></a>
           
         
 <br><br>
