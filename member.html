@@ -114,7 +114,7 @@
                     </li>
 
                     <li class="current_page_item">
-                        <a href="member.html">
+                        <a href="member1.html">
                             学术团队
                         </a>
                     </li>
@@ -250,11 +250,93 @@
             </td>
             <td style="width: 20px"></td>
             <td >
-                <img src="images/member_photo/在读研究生/2015级/张为凡/张为凡.png" width="100px">
+                <script type=text/javascript>
+                    var zwf_u = "images/member_photo/在读研究生/2015级/张为凡/";
+                    var zwf_i = 0;
+                    var zwf_ar = new Array(16);
+                    for(zwf_i=0;zwf_i<zwf_ar.length;zwf_i++){
+                        zwf_ar[zwf_i] = -1;
+                    }
+                    zwf_i = 0;
+                    var bo2 = false;
+                    /*function zwfprim(){
+                     for(var i=0;i<=16;i++){
+                     var img = new Image();
+                     img.src=zwf_u+i+".png";
+                     }
+                     var img = new Image();
+                     img.src = zwf_u+"张为凡.png";
+                     }
+                     window.onload=zwfprim;*/
+                    window.onload = function(){
+                        for(var i=0;i<=16;i++){
+                            var img = new Image();
+                            img.src=zwf_u+i+".png";
+                        }
+                        var img = new Image();
+                        img.src = zwf_u+"张为凡.png";
+                    }
+                    function zwfrandom(a,b){
+                        var ran0 = Math.random();
+                        return(a+Math.round(ran0*(b-a)));
+                    }
+                    function zwfphoto1(){
+                        var zwf_ph = document.getElementById("zwfph");
+                        var bo1 = false;
+                        var rzwf = 1;;
+                        do{
+                            bo1 = false;
+                            rzwf = zwfrandom(1,16);
+                            for(var i=0;i<zwf_ar.length;i++){
+                                if(zwf_ar[i]==rzwf){
+                                    bo1 = true;
+                                }
+                            }
+                        }while(bo1);
+                        zwf_ar[zwf_i] = rzwf;
+                        zwf_i = zwf_i+1;
+                        /*if(zwf_i>=zwf_ar.length){
+                         zwf_i=0;
+                         for(var i=0;i<zwf_ar.length;i++){
+                         zwf_ar[i]=-1;
+                         }
+                         }*/
+                        //var rzwf = zwfrandom(1,9);
+                        if(zwf_i<zwf_ar.length){
+                            zwf_ph.src = zwf_u+rzwf+".png"
+                            if(bo2 == true){
+                                setTimeout("zwfphoto1()",130)
+                            }
+                            else{
+                                zwf_ph.src = zwf_u+"0.png"
+
+                            }
+
+                        }
+                        else{
+                            zwf_i=0;
+                            for(var i=0;i<zwf_ar.length;i++){
+                                zwf_ar[i]=-1;
+                            }
+                            zwf_ph.src = zwf_u+"张为凡.png"
+                        }
+
+                    }
+                    function zwfphoto2(){
+                        zwf_i=0;
+                        for(var i=0;i<zwf_ar.length;i++){
+                            zwf_ar[i]=-1;
+                        }
+                        var zwf_ph = document.getElementById("zwfph");
+                        zwf_ph.src = zwf_u+"0.png"
+                    }
+                </script>
+                <img id="zwfph" src="images/member_photo/在读研究生/2015级/张为凡/张为凡.png" width="100px" height="140px" onmouseout="bo2=false;zwfphoto2()" onmouseover="bo2=true;zwfphoto1()">
             </td>
             <td width="20px"></td>
             <td style="vertical-align:top">
-                <p style="font-size: 14px;padding-top: 20px"><a style="color: #286090;" href="https://keepthebeats.github.io/">张为凡</a></p>
+                <p style="font-size: 14px;padding-top: 20px">
+                        <a style="color: #286090;" href="https://keepthebeats.github.io/">张为凡</a></p>
                 <p style="font-size: 14px;">软件定义网络</p>
                 <p style="font-size: 14px;">zwfplxz@gmail.com</p>
             </td>
