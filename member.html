@@ -423,7 +423,7 @@
             </td>
         </tr>
         <tr>
-            <td>
+  <!--           <td>
                 <img src="images/member_photo/在读研究生/2017级/张合胜/张合胜.jpg" width="100px" height="140px" >
             </td>
             <td width="20px"></td>
@@ -431,7 +431,111 @@
                 <p style="font-size: 14px;padding-top: 20px;"><a style="color: #286090;">张合胜</a></p>
                 <p style="font-size: 14px;">SDN/网络FPGA</p>
                 <p style="font-size: 14px;">1130600679@qq.com</p>
+            </td> -->
+
+
+
+            <!--   //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                 <td >
+                <script type=text/javascript>
+                    var zwf_u = "images/member_photo/在读研究生/2015级/张为凡/";
+                    var zwf_i = 0;
+                    var zwf_ar = new Array(16);
+                    for(zwf_i=0;zwf_i<zwf_ar.length;zwf_i++){
+                        zwf_ar[zwf_i] = -1;
+                    }
+                    zwf_i = 0;
+                    var bo3 = false;
+                    /*function zwfprim(){
+                     for(var i=0;i<=16;i++){
+                     var img = new Image();
+                     img.src=zwf_u+i+".png";
+                     }
+                     var img = new Image();
+                     img.src = zwf_u+"张为凡.png";
+                     }
+                     window.onload=zwfprim;*/
+                    window.onload = function(){
+                        for(var i=0;i<=16;i++){
+                            var img = new Image();
+                            img.src=zwf_u+i+".png";
+                        }
+                        var img = new Image();
+                        img.src = "images/member_photo/在读研究生/2017级/张合胜/张合胜.jpg";
+                    }
+                    function zhsrandom(a,b){
+                        var ran0 = Math.random();
+                        return(a+Math.round(ran0*(b-a)));
+                    }
+                    function zhsphoto1(){
+                        var zhs_ph = document.getElementById("zhsph");
+                        var bo1 = false;
+                        var rzwf = 1;
+                        do{
+                            bo1 = false;
+                            rzwf = zhsrandom(1,16);
+                            for(var i=0;i<zwf_ar.length;i++){
+                                if(zwf_ar[i]==rzwf){
+                                    bo1 = true;
+                                }
+                            }
+                        }while(bo1);
+                        zwf_ar[zwf_i] = rzwf;
+                        zwf_i = zwf_i+1;
+                        /*if(zwf_i>=zwf_ar.length){
+                         zwf_i=0;
+                         for(var i=0;i<zwf_ar.length;i++){
+                         zwf_ar[i]=-1;
+                         }
+                         }*/
+                        //var rzwf = zhsrandom(1,9);
+                        if(zwf_i<zwf_ar.length){
+                            zhs_ph.src = zwf_u+rzwf+".png"
+                            if(bo3 == true){
+                                setTimeout("zhsphoto1()",130)
+                            }
+                            else{
+                                zhs_ph.src = zwf_u+"0.png"
+
+                            }
+
+                        }
+                        else{
+                            zwf_i=0;
+                            for(var i=0;i<zwf_ar.length;i++){
+                                zwf_ar[i]=-1;
+                            }
+                            zhs_ph.src ="images/member_photo/在读研究生/2017级/张合胜/张合胜.jpg"
+                        }
+
+                    }
+                    function zhsphoto2(){
+                        zwf_i=0;
+                        for(var i=0;i<zwf_ar.length;i++){
+                            zwf_ar[i]=-1;
+                        }
+                        var zhs_ph = document.getElementById("zhsph");
+                        zhs_ph.src = "images/member_photo/在读研究生/2017级/张合胜/张合胜.jpg"
+                    }
+                </script>
+                <img id="zhsph" src="images/member_photo/在读研究生/2017级/张合胜/张合胜.jpg" width="100px" height="140px" onmouseout="bo3=false;zhsphoto2()" onmouseover="bo3=true;zhsphoto1()">
             </td>
+            <td width="20px"></td>
+            <td style="vertical-align:top">
+                <p style="font-size: 14px;padding-top: 20px;"><a style="color: #286090;">张合胜</a></p>
+                <p style="font-size: 14px;">SDN/网络FPGA</p>
+                <p style="font-size: 14px;">1130600679@qq.com</p>
+            </td>
+
+	<!--   //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
 
             <td style="width: 20px"></td>
             <td >
